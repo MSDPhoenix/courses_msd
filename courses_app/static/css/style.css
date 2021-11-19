@@ -1,0 +1,111 @@
+* {
+    margin:0px;
+    border:0px;
+    padding:0px;
+    box-sizing: border-box;
+    /* outline:pink 1px dotted; */
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+    color:ivory;
+}
+body {
+    background-image: linear-gradient(black,darkslategrey,black);
+}
+#wrapper {
+    margin: 10px auto;
+    background-color: rgb(248, 48, 48);
+    width:1000px;
+    padding: 20px 30px;
+    border: outset 2px darkslategrey;
+    box-shadow: 10px 10px 10px black;
+    min-height:800px;
+}
+h2 {
+    padding:20px 5px;
+}
+#top {
+    width:60%;
+}
+input, label, textarea, td, th, span, #yes, #no,li {
+    padding:5px;
+    margin:5px;
+}
+label {
+    width:85px;
+    width:16%;
+    display:inline-block;
+
+}
+#name, #description, #comment {
+    width:75%;
+    border: inset 2px darkslategrey;
+    color:darkslategray;
+}
+#name:focus, #description:focus, #comment:focus {
+    background-color: pink;
+}
+input[type="submit"] {
+    margin-left: 500px;
+    background-color: rgb(66, 129, 66);
+    border: solid 2px darkslategrey;
+    color:white;
+    box-shadow: 5px 5px 5px darkslategrey;
+}
+table {
+    width:99%;
+    border-collapse: collapse;
+    margin: 0px 5px 20px 5px;
+    border: inset 2px darkslategrey;
+}
+tr {
+    text-align: left;
+}
+th {
+    background-color:grey
+}
+tr:nth-child(odd) {
+    background-color:lightgray;
+}tr:nth-child(even) {
+    background-color:lightblue;
+}
+th,td {
+    border: solid 1px darkslategrey;
+}
+td {
+    color:darkslategray;
+}
+#actions, .comments a, #go_back {
+    color:blue;
+}
+#buttons {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+#yes, #no {
+    text-decoration: none;
+    border: solid 1px darkslategrey;
+    box-shadow: 5px 5px 5px darkslategrey;
+}
+#no {
+    margin-right:50px;
+    padding:5px 10px;
+    background-color: grey;
+}
+
+#yes {
+    background-color: darkred;
+}
+span {
+    display:inline-block;
+}
+li {
+    margin-left:50px;
+    color:yellow;
+}
+.comments, .comments li {
+    color:ivory;
+}
+#go_back {
+    float: right;
+}

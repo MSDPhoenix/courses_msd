@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Comments</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'javascript/script.js' %}"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <a id="go_back" href="/">Go Back</a>
+        <h2>Course comments for the following course:</h2>
+        <label>Name:</label>
+        <span>{{name}}</span> 
+        <br>
+        <label>Description:</label>    
+        <span>{{description}}</span>
+        <h2 class="comments">Comments:</h2>
+        <ul class="comments">
+            {% for comment in comments %}
+                <li>{{comment.comment}} {{comment.date_added}} <a href="{{course_id}}/{{comment.id}}/delete_comment">(x)</a></li>
+            {% endfor %}
+        </ul>
+        <form action="{{course_id}}/post_comment" method="POST">
+            {% csrf_token %}
+            <label for="comment">Write comment:</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" value="Add Comment">
+
+        </form>
+    </div> 
+</body>
+</html>

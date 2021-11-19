@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Course</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'javascript/script.js' %}"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Are you sure you want to delete the following course?</h2>
+        <label>Name:</label>
+        <span>{{name}}</span> 
+        <br>
+        <label>Description:</label>    
+        <span>{{description}}</span> 
+        <div id="buttons">
+            <a id="no" href="/">No</a>
+            <a id="yes" href="/remove_course_from_database/{{course_id}}">Yes! I want to delete this</a>
+        </div>   
+    </div> 
+</body>
+</html>
